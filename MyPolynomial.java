@@ -63,7 +63,7 @@ public class MyPolynomial {
     double[] mulCoeffs = new double[this.getDegree() + right.getDegree() + 1];
     for (int i = 0; i <= this.getDegree(); i++) {
       for (int j = 0; j <= right.getDegree(); j++) {
-        mulCoeffs[i + j] = coeffs[i] * right.getCoeffs()[j];
+        mulCoeffs[i + j] += coeffs[i] * right.getCoeffs()[j];
       }
     }
     this.setCoeffs(mulCoeffs);
